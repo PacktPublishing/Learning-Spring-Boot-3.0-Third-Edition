@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 class ListOfVideos extends React.Component {
     constructor(props) {
@@ -7,8 +7,7 @@ class ListOfVideos extends React.Component {
     }
 
     async componentDidMount() {
-        let response = await fetch("/api/videos")
-        let json = await response.json()
+        let json = await fetch("/api/videos").json()
         this.setState({data: json})
     }
 

@@ -22,8 +22,7 @@ public class HomeController {
   }
 
   @GetMapping("/react")
-  public String react(Model model) {
-    model.addAttribute("videos", videoService.getVideos());
+  public String react() {
     return "react";
   }
 

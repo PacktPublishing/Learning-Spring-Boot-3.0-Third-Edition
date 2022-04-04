@@ -60,9 +60,7 @@
             <goals>
               <goal>npx</goal>
             </goals>
-
             <phase>generate-resources</phase>
-
             <configuration>
               <arguments>parcel build</arguments>
             </configuration>

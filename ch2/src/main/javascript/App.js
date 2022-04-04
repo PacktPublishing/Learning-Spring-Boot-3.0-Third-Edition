@@ -1,6 +1,6 @@
 import React from 'react'
 import ListOfVideos from './ListOfVideos'
-import NewVideo from "./NewVideo";
+import NewVideo from "./NewVideo"
 
 export function App() {
     return (
@@ -10,4 +10,3 @@ export function App() {
         </div>
     )
 }
-
