@@ -1,0 +1,32 @@
+<h1>Greetings Learning Spring Boot 3.0 fans!</h1>
+
+<p>
+    In this chapter, we are learning how to make
+    a web app using Spring Boot 3.0
+</p>
+
+<form action="/multi-field-search" method="post">
+    <label for="name">Name:</label>
+    <input type="text" name="name" placeholder="Name">
+    <label for="description">Description:</label>
+    <input type="text" name="description" placeholder="Description">
+    <button type="submit">Search</button>
+</form>
+
+<form action="/universal-search" method="post">
+    <label for="value">Search:</label>
+    <input type="text" name="value" placeholder="Search">
+    <button type="submit">Search</button>
+</form>
+
+<ul>
+    {{#videos}}
+        <li>{{name}}</li>
+    {{/videos}}
+
+    <form action="/new-video" method="post">
+        <input type="text" name="name">
+        <input type="text" name="description">
+        <button type="submit">Submit</button>
+    </form>
+</ul>
