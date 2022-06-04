@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<h1>Greetings Learning Spring Boot 3.0 fans!</h1>
+
+<p>
+    In this section, we are learning how to make
+    a web app using Spring Boot 3.0 + OAuth 2.0
+</p>
+
+<h2>Your Videos</h2>
+<table>
+    <thead>
+    <tr>
+        <td>Id</td>
+        <td>Published</td>
+        <td>Thumbnail</td>
+        <td>Title</td>
+        <td>Description</td>
+    </tr>
+    </thead>
+    <tbody>
+    {{#channelVideos.items}}
+        <tr>
+            <td>{{id.videoId}}</td>
+            <td>{{snippet.publishedAt}}</td>
+            <td>
+                <a href="https://www.youtube.com/watch?v={{id.videoId}}" target="_blank">
+                <img src="{{snippet.thumbnail.url}}" alt="thumbnail"/>
+                </a>
+            </td>
+            <td>{{snippet.title}}</td>
+            <td>{{snippet.shortDescription}}</td>
+        </tr>
+    {{/channelVideos.items}}
+    </tbody>
+</table>
+</body>

@@ -1,0 +1,30 @@
+#spring.security.oauth2.client.registration.google.clientId=82223007744-ug5i04cjrs234n9lchusflspatb44jtu.apps.googleusercontent.com
+#spring.security.oauth2.client.registration.google.client-secret=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
+#spring.security.oauth2.client.registration.google.scope=openid,profile,email,https://www.googleapis.com/auth/youtube
+#
+#com.springbootlearning.danvega=UCc98QQw1D-y38wg6mO3w4MQ
+#com.springbootlearning.springbootlearning=UCjukbYOd6pjrMpNMFAOKYyw
+#
+#logging.level.com.springbootlearning=DEBUG
+#logging.level.org.springframework.security=TRACE
+#logging.level.org.springframework.security.oauth2=TRACE
+#logging.level.org.springframework.web=TRACE
+#logging.level.org.springframework.web.reactive=TRACE
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: **your client id**
+            clientSecret: **your client secret**
+            scope: openid,profile,email,https://www.googleapis.com/auth/youtube
+
+logging:
+  level:
+    com.springbootlearning: DEBUG
+    org.springframework.security: TRACE
+    org.springframework.security.oauth2: TRACE
+    org.springframework.web: TRACE
+    org.springframework.web.reactive: TRACE

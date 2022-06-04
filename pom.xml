@@ -12,6 +12,9 @@
   <modules>
     <module>ch2</module>
     <module>ch3</module>
+    <module>ch4</module>
+    <module>ch4-method-security</module>
+    <module>ch4-oauth</module>
   </modules>
 
 </project>
