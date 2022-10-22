@@ -1,0 +1,46 @@
+<h1>{{header}}</h1>
+
+<p>{{intro}}</p>
+
+<h3>User Profile</h3>
+<ul>
+    <li>Username: {{authentication.name}}</li>
+    <li>Authorities: {{authentication.authorities}}</li>
+</ul>
+
+<form action="/logout" method="post">
+    <input type="hidden" name="{{_csrf.parameterName}}" value="{{_csrf.token}}">
+    <button type="submit">Logout</button>
+</form>
+
+<hr>
+
+<form action="/search" method="post">
+    <label for="value">Search:</label>
+    <input type="text" name="value">
+    <input type="hidden" name="{{_csrf.parameterName}}" value="{{_csrf.token}}">
+    <button type="submit">Search</button>
+</form>
+
+{{#search}}
+    Searching: {{value}}
+{{/search}}
+
+<ul>
+    {{#videos}}
+        <li>
+            {{name}}
+            <form action="/delete/videos/{{id}}" method="post">
+                <input type="hidden" name="{{_csrf.parameterName}}" value="{{_csrf.token}}">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+    {{/videos}}
+
+    <form action="/new-video" method="post">
+        <input type="text" name="name">
+        <input type="text" name="description">
+        <input type="hidden" name="{{_csrf.parameterName}}" value="{{_csrf.token}}">
+        <button type="submit">Submit</button>
+    </form>
+</ul>

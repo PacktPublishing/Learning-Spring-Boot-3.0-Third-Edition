@@ -30,10 +30,13 @@ public class YouTubeConfig {
   }
 
   @Bean
-  YouTube client(WebClient oauth2WebClient) {
-    HttpServiceProxyFactory factory = HttpServiceProxyFactory.builder( //
-      new WebClientAdapter(oauth2WebClient)) //
-      .build();
+  HttpServiceProxyFactory proxyFactory(WebClient oauth2WebClient) {
+    return new HttpServiceProxyFactory( //
+      WebClientAdapter.forClient(oauth2WebClient));
+  }
+
+  @Bean
+  YouTube client(HttpServiceProxyFactory factory) {
     return factory.createClient(YouTube.class);
   }
 }

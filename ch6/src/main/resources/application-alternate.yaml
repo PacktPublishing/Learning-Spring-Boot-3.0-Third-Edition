@@ -1,0 +1,20 @@
+app:
+  config:
+    header: Greetings from YAML-based settings!
+    intro: Check out this page hosted from YAML
+    users:
+      -
+        username: yaml1
+        password: password
+        authorities:
+          - ROLE_USER
+      -
+        username: yaml2
+        password: password
+        authorities:
+          - ROLE_USER
+      -
+        username: yaml3
+        password: password
+        authorities:
+          - ROLE_ADMIN
