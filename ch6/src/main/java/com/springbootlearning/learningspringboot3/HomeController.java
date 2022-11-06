@@ -21,7 +21,7 @@ public class HomeController {
     this.appConfig = appConfig;
   }
 
-@GetMapping
+@GetMapping("/")
 public String index(Model model, //
   Authentication authentication) {
   model.addAttribute("videos", videoService.getVideos());

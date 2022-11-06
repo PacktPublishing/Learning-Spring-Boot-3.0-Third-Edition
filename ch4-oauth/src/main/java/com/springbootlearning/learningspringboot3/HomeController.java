@@ -13,7 +13,7 @@ public class HomeController {
     this.youTube = youTube;
   }
 
-  @GetMapping
+  @GetMapping("/")
   String index(Model model) {
     model.addAttribute("channelVideos", //
       youTube.channelVideos("UCjukbYOd6pjrMpNMFAOKYyw", //

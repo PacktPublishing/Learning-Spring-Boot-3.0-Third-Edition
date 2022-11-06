@@ -17,7 +17,7 @@ public class HomeController {
     this.videoService = videoService;
   }
 
-  @GetMapping
+  @GetMapping("/")
   public String index(Model model) {
     model.addAttribute("videos", videoService.getVideos());
     return "index";

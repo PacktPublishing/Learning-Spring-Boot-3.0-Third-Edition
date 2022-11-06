@@ -32,10 +32,10 @@ public class SecurityConfig {
   @Bean
   SecurityFilterChain configureSecurity(HttpSecurity http) throws Exception {
     http.authorizeHttpRequests() //
-      .mvcMatchers("/login").permitAll() //
-      .mvcMatchers("/", "/search").authenticated() //
-      .mvcMatchers(HttpMethod.GET, "/api/**").authenticated() //
-      .mvcMatchers(HttpMethod.POST, "/delete/**", "/new-video").authenticated() //
+      .requestMatchers("/login").permitAll() //
+      .requestMatchers("/", "/search").authenticated() //
+      .requestMatchers(HttpMethod.GET, "/api/**").authenticated() //
+      .requestMatchers(HttpMethod.POST, "/delete/**", "/new-video").authenticated() //
       .anyRequest().denyAll() //
       .and() //
       .formLogin() //

@@ -4,7 +4,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
-import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.SecurityFilterChain;
@@ -28,10 +27,11 @@ public class SecurityConfig {
   @Bean
   SecurityFilterChain configureSecurity(HttpSecurity http) throws Exception {
     http.authorizeHttpRequests() //
-      .mvcMatchers("/login").permitAll() //
-      .mvcMatchers("/", "/search").authenticated() //
-      .mvcMatchers(HttpMethod.GET, "/api/**").authenticated() //
-      .mvcMatchers(HttpMethod.POST, "/new-video", "/api/**").hasRole("ADMIN") //
+      .requestMatchers("/login").permitAll() //
+      .requestMatchers("/", "/search").authenticated() //
+      .requestMatchers(HttpMethod.GET, "/api/**").authenticated() //
+      .requestMatchers("/admin").hasRole("ADMIN") //
+      .requestMatchers(HttpMethod.POST, "/new-video", "/api/**").hasRole("ADMIN") //
       .anyRequest().denyAll() //
       .and() //
       .formLogin() //

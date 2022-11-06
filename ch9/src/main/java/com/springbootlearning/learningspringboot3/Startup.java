@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Startup {
-
   @Bean
   CommandLineRunner initDatabase() {
     return args -> {

@@ -1,6 +1,6 @@
 package com.springbootlearning.learningspringboot3;
 
-import static org.springframework.security.authorization.AuthorityAuthorizationManager.*;
+import static org.springframework.security.authorization.AuthorityAuthorizationManager.hasRole;
 
 import java.util.stream.Stream;
 
@@ -15,9 +15,9 @@ public class ComplexSecurityConfig {
   @Bean
   SecurityFilterChain configureSecurity(HttpSecurity http) throws Exception {
     http.authorizeHttpRequests() //
-      .mvcMatchers("/resources/**", "/about", "/login").permitAll() //
-      .mvcMatchers(HttpMethod.GET, "/admin/**").hasRole("ADMIN") //
-      .mvcMatchers("/db/**").access((authentication, object) -> {
+      .requestMatchers("/resources/**", "/about", "/login").permitAll() //
+      .requestMatchers(HttpMethod.GET, "/admin/**").hasRole("ADMIN") //
+      .requestMatchers("/db/**").access((authentication, object) -> {
         boolean anyMissing = Stream.of("ADMIN", "DBA")//
           .map(role -> hasRole(role).check(authentication, object).isGranted()) //
           .filter(granted -> !granted) //
