@@ -31,8 +31,9 @@ public class YouTubeConfig {
 
   @Bean
   HttpServiceProxyFactory proxyFactory(WebClient oauth2WebClient) {
-    return new HttpServiceProxyFactory( //
-      WebClientAdapter.forClient(oauth2WebClient));
+    return HttpServiceProxyFactory.builder() //
+      .clientAdapter(WebClientAdapter.forClient(oauth2WebClient)) //
+      .build();
   }
 
   @Bean
