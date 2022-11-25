@@ -10,10 +10,10 @@ https://springbootlearning.com/book[Grab your copy today] and learn to simplify 
 
 https://springbootlearning.com/book[image:learning-spring-boot-3-0-3rd-edition.jpg[]]
 
-*Greg L. Turnquist* is a test-bitten script junky and a member of the Spring team at VMware. He wrote technical best sellers _Hacking with Spring Boot 2.4: Classic Edition_, _Hacking with Spring Boot 2.3: Reactive Edition_, _Learning Spring Boot 2.0 2nd Edition_ and _Python Testing Cookbook_. He also launched the YouTube channel, https://www.youtube.com/SpringBootLearning[Spring Boot Learning], where you learn about Spring Boot and have fun doing it!
+*Greg L. Turnquist* is a test-bitten script junky and a member of the Spring team at VMware. He wrote technical best sellers _Hacking with Spring Boot 2.4: Classic Edition_, _Hacking with Spring Boot 2.3: Reactive Edition_, _Learning Spring Boot 2.0 2nd Edition_ and _Python Testing Cookbook_. He also launched the YouTube channel, https://www.youtube.com/@SpringBootLearning[Spring Boot Learning], where you learn about Spring Boot and have fun doing it!
 
 
-Follow him on Twitter https://twitter.com/springbootlearn[@springbootlearn] and subscribe for all his Spring Boot videos at https://www.youtube.com/SpringBootLearning[YouTube.com/SpringBootLearning].
+Follow him on Twitter https://twitter.com/springbootlearn[@springbootlearn] and subscribe for all his Spring Boot videos at https://www.youtube.com/@SpringBootLearning[YouTube.com/@SpringBootLearning].
 
 == Code for the book
 
