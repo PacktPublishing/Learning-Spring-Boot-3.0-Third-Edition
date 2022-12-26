@@ -1,28 +1,71 @@
-== Learning Spring Boot 3.0: 3rd Edition (Packt)
+# Learning Spring Boot 3.0
 
-*Spring Boot 3* is the hottest ticket in town when it comes to building Java apps. In this book, you’ll learn how to leverage powerful databases and Spring Boot's highly adopted Spring MVC web technology. This practical guide will help you get up and running with all the latest features of Spring Boot 3.
+<a href="https://www.packtpub.com/product/learning-spring-boot-30-third-edition/9781803233307?utm_source=github&utm_medium=repository&utm_campaign=9781803233307"><img src="https://static.packt-cdn.com/products/9781803233307/cover/smaller" alt="" height="256px" align="right"></a>
 
-The book starts by helping you build a simple app and then shows you how to secure, test, bundle and deploy it to production. Next, you’ll focus on the ability to go ‘native’ and release your app on GraalVM. Later chapters cover reactive programming and explore scalable web controllers and data operations. You’ll gain in-depth insights into developer tools, security, and deployment. In addition to this, you’ll learn how to secure your application using both routes and method-based rules.
+This is the code repository for [Learning Spring Boot 3.0](https://www.packtpub.com/product/learning-spring-boot-30-third-edition/9781803233307?utm_source=github&utm_medium=repository&utm_campaign=9781803233307), published by Packt.
 
-By the end of this book, you’ll be able to apply what you’ve learned to any Spring Boot related problem.
+**Simplify the development of production-grade applications using Java and Spring**
 
-https://springbootlearning.com/book[Grab your copy today] and learn to simplify the development of production-grade applications!
+## What is this book about?
+Spring Boot 3 brings more than just the powerful ability to build secure web apps on top of a rock-solid database. It delivers new options for testing, deployment, Docker support, and native images for GraalVM, along with ways to squeeze out more efficient usage of existing resources.
 
-https://springbootlearning.com/book[image:learning-spring-boot-3-0-3rd-edition.jpg[]]
+This book covers the following exciting features:
+* Create powerful, production-grade web applications with minimal fuss
+* Support multiple environments with one artifact, and add production-grade support with features
+* Find out how to tweak your Java apps through different properties
+* Enhance the security model of your apps
+* Make use of enhancing features such as native deployment and reactive programming in Spring Boot
+* Build anything from lightweight unit tests to fully running embedded web container integration tests
+* Get a glimpse of reactive programming and decide if it's the right approach for you
 
-*Greg L. Turnquist* is a test-bitten script junky and a member of the Spring team at VMware. He wrote technical best sellers _Hacking with Spring Boot 2.4: Classic Edition_, _Hacking with Spring Boot 2.3: Reactive Edition_, _Learning Spring Boot 2.0 2nd Edition_ and _Python Testing Cookbook_. He also launched the YouTube channel, https://www.youtube.com/@SpringBootLearning[Spring Boot Learning], where you learn about Spring Boot and have fun doing it!
+If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1803233303) today!
 
+<a href="https://www.packtpub.com/?utm_source=github&utm_medium=banner&utm_campaign=GitHubBanner"><img src="https://raw.githubusercontent.com/PacktPublishing/GitHub/master/GitHub.png" 
+alt="https://www.packtpub.com/" border="5" /></a>
 
-Follow him on Twitter https://twitter.com/springbootlearn[@springbootlearn] and subscribe for all his Spring Boot videos at https://www.youtube.com/@SpringBootLearning[YouTube.com/@SpringBootLearning].
+## Instructions and Navigations
+All of the code is organized into folders. For example, Chapter02.
 
-== Code for the book
+The code will look like the following:
+```
+@Controller
+public class HomeController {
+  private final VideoService videoService;
+  public HomeController(VideoService videoService) {
+    this.videoService = videoService;
+  }
 
-This is a standing repo of the code for _Learning Spring Boot 3.0: 3rd Edition_ published by Packt.
+  @GetMapping("/")
+  public String index(Model model) {
+    model.addAttribute("videos", videoService.getVideos());
+    return "index";
+  }
+}
+```
 
-CAUTION: No have Java? I suggest you download and install https://sdkman.io/[sdkman] and use it to install your favorite version of Java 17!
+**Following is what you need for this book:**
+This book is for both novices and experienced Spring developers looking to learn how to build applications without wasting time on infrastructure and other tedious details. Working knowledge of the Java programming language is assumed.
 
-Stay tuned. In the meantime, http://www.urbandictionary.com/define.php?term=share%20and%20enjoy[share and enjoy]!
+With the following software and hardware list you can run all code files present in the book (Chapter 1-10).
+### Software and Hardware List
+| Chapter | Software required | OS required |
+| -------- | ------------------------------------ | ----------------------------------- |
+| 1-10 | sdkman (for Java 17) (https://sdkman.io) | Windows, Mac OS X, and Linux (Any) |
+| 1-10 | IntelliJ IDEA (https://springbootlearning.com/ | Windows, Mac OS X, and Linux (Any) |
+| 1-10 | VS Code (https://springbootlearning.com/ | Windows, Mac OS X, and Linux (Any) |
+| 1-10 | Spring Tool Suite (https://springbootlearning.com/sts) | Windows, Mac OS X, and Linux (Any) |
 
-== Licensing
+We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://packt.link/FvE6S).
 
-The code in this project is MIT licensed (see LICENSE file) and copyrighted by Packt Publishing.
+### Related products
+* Spring Boot and Angular [[Packt]](https://www.packtpub.com/product/spring-boot-and-angular/9781803243214?utm_source=github&utm_medium=repository&utm_campaign=9781803243214) [[Amazon]](https://www.amazon.com/dp/180324321X)
+
+* Full Stack Development with Spring Boot and React - Third Edition [[Packt]](https://www.packtpub.com/product/full-stack-development-with-spring-boot-and-react-third-edition/9781801816786?utm_source=github&utm_medium=repository&utm_campaign=9781801816786) [[Amazon]](https://www.amazon.com/dp/1801816786)
+
+## Get to Know the Author
+**Greg L. Turnquist**
+Greg L. Turnquist works on the Spring team at VMware. He is the project lead for Spring Data JPA and has committed to multiple projects including Spring Boot, Spring Security, R2DBC, Spring HATEOAS, and more. He has written the Hacking with Spring Boot series as well as Packt's best-selling title, Learning Spring Boot 2.0 2nd Edition. He co-founded the Nashville Java User Group in 2010 and hasn't met a Java app (yet) that he doesn't like.
+
+He completed his master's degree in computer engineering at Auburn University and lives in the United States with his family.
+
+Be sure to check out his YouTube channel, Spring Boot Learning, where you learn about Spring Boot and have fun doing it at youtube.com/@springbootlearning
