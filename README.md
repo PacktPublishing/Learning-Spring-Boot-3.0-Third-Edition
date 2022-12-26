@@ -63,8 +63,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 * Full Stack Development with Spring Boot and React - Third Edition [[Packt]](https://www.packtpub.com/product/full-stack-development-with-spring-boot-and-react-third-edition/9781801816786?utm_source=github&utm_medium=repository&utm_campaign=9781801816786) [[Amazon]](https://www.amazon.com/dp/1801816786)
 
 ## Get to Know the Author
-**Greg L. Turnquist**<br/>
-Greg L. Turnquist works on the Spring team at VMware. He is the project lead for Spring Data JPA and has committed to multiple projects including Spring Boot, Spring Security, R2DBC, Spring HATEOAS, and more. He has written the Hacking with Spring Boot series as well as Packt's best-selling title, Learning Spring Boot 2.0 2nd Edition. He co-founded the Nashville Java User Group in 2010 and hasn't met a Java app (yet) that he doesn't like.
+**Greg L. Turnquist** works on the Spring team at VMware. He is the project lead for Spring Data JPA and has committed to multiple projects including Spring Boot, Spring Security, R2DBC, Spring HATEOAS, and more. He has written the Hacking with Spring Boot series as well as Packt's best-selling title, Learning Spring Boot 2.0 2nd Edition. He co-founded the Nashville Java User Group in 2010 and hasn't met a Java app (yet) that he doesn't like.
 
 He completed his master's degree in computer engineering at Auburn University and lives in the United States with his family.
 
