@@ -7,7 +7,8 @@ class ListOfVideos extends React.Component {
     }
 
     async componentDidMount() {
-        let json = await fetch("/api/videos").json()
+        let response = await fetch("/api/videos")
+        let json = await response.json()
         this.setState({data: json})
     }
 
