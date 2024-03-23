@@ -71,7 +71,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 He completed his master's degree in computer engineering at Auburn University and lives in the United States with his family.
 
-Be sure to check out his YouTube channel, [Pro Coder](youtube.com/@ProCoderIO), where you learn to become a savvy pro!
+Be sure to check out his YouTube channel, [Pro Coder](https://youtube.com/@ProCoderIO), where you learn to become a savvy pro!
 
 ### Download a free PDF
 
