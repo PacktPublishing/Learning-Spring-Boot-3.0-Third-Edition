@@ -51,8 +51,8 @@ With the following software and hardware list you can run all code files present
 | Chapter | Software required | OS required |
 | -------- | ------------------------------------ | ----------------------------------- |
 | 1-10 | sdkman (for Java 17) (https://sdkman.io) | Windows, Mac OS X, and Linux (Any) |
-| 1-10 | IntelliJ IDEA (https://springbootlearning.com/ | Windows, Mac OS X, and Linux (Any) |
-| 1-10 | VS Code (https://springbootlearning.com/ | Windows, Mac OS X, and Linux (Any) |
+| 1-10 | IntelliJ IDEA (https://springbootlearning.com/intellij-idea) | Windows, Mac OS X, and Linux (Any) |
+| 1-10 | VS Code (https://springbootlearning.com/) | Windows, Mac OS X, and Linux (Any) |
 | 1-10 | Spring Tool Suite (https://springbootlearning.com/sts) | Windows, Mac OS X, and Linux (Any) |
 
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://packt.link/FvE6S).
@@ -67,11 +67,11 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 * Page 65, Note box:  **EndsWith puts the wildcard at the end** _should be_ **EndsWith puts the wildcard at the beginning**
 
 ## Get to Know the Author
-**Greg L. Turnquist** works on the Spring team at VMware. He is the project lead for Spring Data JPA and has committed to multiple projects including Spring Boot, Spring Security, R2DBC, Spring HATEOAS, and more. He has written the Hacking with Spring Boot series as well as Packt's best-selling title, Learning Spring Boot 2.0 2nd Edition. He co-founded the Nashville Java User Group in 2010 and hasn't met a Java app (yet) that he doesn't like.
+**Greg L. Turnquist** is a senior staff technical content engineer at Cockroach Labs and was a former developer on the Spring team. He was the project lead for Spring Data JPA and has committed to multiple projects including Spring Boot, Spring Security, R2DBC, Spring HATEOAS, and more. He has written the _Hacking with Spring Boot_ series as well as Packt's best-selling title, _Learning Spring Boot 2.0 2nd Edition_. He co-founded the Nashville Java User Group in 2010 and hasn't met a Java app (yet) that he doesn't like.
 
 He completed his master's degree in computer engineering at Auburn University and lives in the United States with his family.
 
-Be sure to check out his YouTube channel, Spring Boot Learning, where you learn about Spring Boot and have fun doing it at youtube.com/@springbootlearning
+Be sure to check out his YouTube channel, [Pro Coder](youtube.com/@ProCoderIO), where you learn to become a savvy pro!
 
 ### Download a free PDF
 
