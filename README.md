@@ -65,6 +65,86 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 ## Errata 
 * Page 65, Note box:  **!!putting the wildcard at the beginning!!** _should be_ **!!putting the wildcard at the END!!**
 * Page 65, Note box:  **EndsWith puts the wildcard at the end** _should be_ **EndsWith puts the wildcard at the beginning**
+* In Chapter 4, under the section "Invoking an OAuth2 API remotely," there is a missing code snippet after the provided snippet on pages 108-109.
+
+**Original Code Snippet (Pages 108-109):**
+
+```java
+@Configuration
+public class YouTubeConfig {
+
+  static String YOUTUBE_V3_API = //
+    "https://www.googleapis.com/youtube/v3";
+
+  @Bean
+  WebClient webClient( //
+    OAuth2AuthorizedClientManager clientManager) {
+
+    ServletOAuth2AuthorizedClientExchangeFilterFunction oauth2 = //
+      new ServletOAuth2AuthorizedClientExchangeFilterFunction( //
+        clientManager);
+    oauth2.setDefaultClientRegistrationId("google");
+
+    return WebClient.builder() //
+      .baseUrl(YOUTUBE_V3_API) //
+      .apply(oauth2.oauth2Configuration()) //
+      .build();
+  }
+}
+```
+
+**Missing Code Snippet:**
+```
+@Bean
+HttpServiceProxyFactory proxyFactory(WebClient oauth2WebClient) {
+  return HttpServiceProxyFactory.builder() //
+    .clientAdapter(WebClientAdapter.forClient(oauth2WebClient)) //
+    .build();
+}
+
+@Bean
+YouTube client(HttpServiceProxyFactory factory) {
+  return factory.createClient(YouTube.class);
+}
+```
+**Updated Code Snippet (Including Missing Code):**
+```
+@Configuration
+public class YouTubeConfig {
+
+  static String YOUTUBE_V3_API = //
+    "https://www.googleapis.com/youtube/v3";
+
+  @Bean
+  WebClient webClient( //
+    OAuth2AuthorizedClientManager clientManager) {
+
+    ServletOAuth2AuthorizedClientExchangeFilterFunction oauth2 = //
+      new ServletOAuth2AuthorizedClientExchangeFilterFunction( //
+        clientManager);
+    oauth2.setDefaultClientRegistrationId("google");
+
+    return WebClient.builder() //
+      .baseUrl(YOUTUBE_V3_API) //
+      .apply(oauth2.oauth2Configuration()) //
+      .build();
+  }
+
+  @Bean
+  HttpServiceProxyFactory proxyFactory(WebClient oauth2WebClient) {
+    return HttpServiceProxyFactory.builder() //
+      .clientAdapter(WebClientAdapter.forClient(oauth2WebClient)) //
+      .build();
+  }
+
+  @Bean
+  YouTube client(HttpServiceProxyFactory factory) {
+    return factory.createClient(YouTube.class);
+  }
+}
+```
+Please update the `YouTubeConfig.java` file with the above complete code snippet to ensure completeness in configuring the HTTP service proxy and creating the YouTube client.
+
 
 ## Get to Know the Author
 **Greg L. Turnquist** is a senior staff technical content engineer at Cockroach Labs and was a former developer on the Spring team. He was the project lead for Spring Data JPA and has committed to multiple projects including Spring Boot, Spring Security, R2DBC, Spring HATEOAS, and more. He has written the _Hacking with Spring Boot_ series as well as Packt's best-selling title, _Learning Spring Boot 2.0 2nd Edition_. He co-founded the Nashville Java User Group in 2010 and hasn't met a Java app (yet) that he doesn't like.
