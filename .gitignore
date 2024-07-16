@@ -35,3 +35,8 @@ build/
 .sonar4clipse
 *.sonar4clipseExternals
 .DS_Store
+
+### Node.js ###
+node/
+node_modules/
+.parcel-cache/
